@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/25 13:54:25 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/09/29 16:47:19 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/09/29 18:47:03 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/09/29 18:55:40 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap	a("qais");
+	FragTrap a("qais");
 
 	a.attack("Dummy");
-	a.takeDamage(1);
-	a.takeDamage(1);
-	a.attack("Dummy");
-	a.beRepaired(10);
+	a.takeDamage(10);
+	a.beRepaired(5);
+	a.highFivesGuys();
 	return (0);
 }

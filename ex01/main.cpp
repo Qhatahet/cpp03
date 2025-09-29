@@ -5,21 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/25 13:54:25 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/09/29 16:47:19 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/09/29 16:48:37 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/09/29 18:14:01 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap	a("qais");
+	ScavTrap a("qais");
 
-	a.attack("Dummy");
-	a.takeDamage(1);
-	a.takeDamage(1);
-	a.attack("Dummy");
-	a.beRepaired(10);
+	a.attack("dummy");
+	a.guardGate();
 	return (0);
 }

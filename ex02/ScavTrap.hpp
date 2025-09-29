@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Scavtrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/25 13:54:25 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/09/29 16:47:19 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/09/29 18:17:50 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/09/29 18:22:14 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int	main(void)
+class ScavTrap : public ClapTrap
 {
-	ClapTrap	a("qais");
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &obj);
+		ScavTrap&	operator=(const ScavTrap &obj);
+		~ScavTrap();
+		void	guardGate();
+};
 
-	a.attack("Dummy");
-	a.takeDamage(1);
-	a.takeDamage(1);
-	a.attack("Dummy");
-	a.beRepaired(10);
-	return (0);
-}
+#endif

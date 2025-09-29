@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/25 13:54:46 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/09/29 18:58:19 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/09/29 16:48:34 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/09/29 18:57:58 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,25 @@
 ClapTrap::ClapTrap()
 {
 	name = "";
-	hitP = 10;
-	energyP = 10;
-	attackD = 0;
-	std::cout << "Default constructor called" << std::endl;
+	hitP = 100;
+	energyP = 50;
+	attackD = 20;
+	std::cout << "ClapTrap Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
 	this->name = name;
-	hitP = 10;
-	energyP = 10;
-	attackD = 0;
-	std::cout << "parameterized constructor called" << std::endl;
+	hitP = 100;
+	energyP = 50;
+	attackD = 20;
+	std::cout << "ClapTrap parameterized constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &obj)
 {
 	*this = obj;
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap Copy constructor called" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &obj)
@@ -45,7 +45,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &obj)
 		this->energyP = obj.energyP;
 		this->hitP = obj.hitP;
 	}
-	std::cout << "Copy assignment oprator called" << std::endl;
+	std::cout << "ClapTrap Copy assignment oprator called" << std::endl;
 	return (*this);
 }
 
@@ -58,7 +58,7 @@ void	ClapTrap::attack(const std::string& target)
 {
 	if (target.empty())
 	{
-		std::cout << "there is no target" << std::endl;	
+		std::cout << "there is no target" << std::endl;
 		return ;
 	}
 	if (name.empty())
