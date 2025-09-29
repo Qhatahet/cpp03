@@ -43,3 +43,24 @@ void	ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << name << " is in gate keeper mode" << std::endl;
 }
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (target.empty())
+	{
+		std::cout << "there is no target" << std::endl;
+		return ;
+	}
+	if (name.empty())
+	{
+		std::cout << "Scavtrap Doesn't have a name" << std::endl;
+		return ;
+	}
+	if (hitP <= 0 || energyP <= 0)
+	{
+		std::cout << "Can't attack there is no hit point or energy point" << std::endl;
+		return ;
+	}
+	energyP--;
+	std::cout << "Scavtrap " << name << " attacks " << target << ", causing " << attackD << " points of damage!" << std::endl; 
+}
